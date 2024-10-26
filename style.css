@@ -1,0 +1,125 @@
+body {
+    font-family: Spectral, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5e6d3;
+    color: #341f05;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 40px;
+    text-align: left;
+}
+
+.greeting {
+    font-family: 'Spectral', cursive;
+    font-size: 4.5rem;
+    color: #000000;
+    float: left;
+    line-height: 1;
+    padding-right: 20px;
+    margin: 0;
+    margin-top: -20px;
+    width: 120px;  /* Control width of the float */
+}
+
+.about-text {
+    margin: 0;
+    overflow: hidden;  /* Creates new block formatting context */
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.project-box {
+    padding: 20px;   
+    border: 3px double #341f05;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;  /* Take full height of grid cell */
+}
+
+.project-box:hover {
+    background-color: #e2c7a4;  /* Slightly darker than your background */
+    border-color: #291803;
+    /* transform: translateY(-2px); */
+    /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
+    /* border: 3px double #b3a18f; */
+    /* padding: 18px; */
+}
+
+.project-title {
+    font-size: 1.25rem;
+    color: #341f05;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    margin: 0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  /* This pushes the icons to the right */
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    padding-right: 10px;
+}
+
+.social-icons a {
+    color: #341f05;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    
+}
+
+.social-icons a:hover {
+    color: #666;
+}
+
+.star-count {
+    font-size: 0.9rem;
+    color: #352108;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-top: auto;  /* Extra insurance to push to bottom */
+}
+
+.star-count:hover {
+    color: #9e8226;
+    /* font-weight: bold; */
+}
+
+.project-description {
+    margin: 0;
+    margin-bottom: 4px;  /* Reduced from 8px to 4px */
+}
+
+.company-link {
+    color: #341f05;
+    text-decoration: underline;
+}
+
+.company-link:hover {
+    color: #7734ce;
+}
+
+.project-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;  /* Make the link take full space */
+}
