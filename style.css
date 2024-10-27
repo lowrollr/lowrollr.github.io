@@ -35,7 +35,8 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    padding-bottom: 20px;
+    margin-bottom: 80px;  /* increased margin to footer */
+    grid-auto-rows: 1fr;
 }
 
 .project-box {
@@ -47,7 +48,8 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 100%;  /* Take full height of grid cell */
+    height: 100%;    /* Changed: fill the grid cell height */
+    min-height: 0;   /* Changed: allows proper sizing */
 }
 
 .project-box:hover {
@@ -106,7 +108,6 @@ body {
 
 .project-description {
     margin: 0;
-    margin-bottom: 4px;  /* Reduced from 8px to 4px */
 }
 
 .company-link {
@@ -122,4 +123,13 @@ body {
     text-decoration: none;
     color: inherit;
     display: block;  /* Make the link take full space */
+}
+
+.main {
+    padding-bottom: 20px;
+}
+
+footer {
+    clear: both;          /* ensures footer starts after all floated content */
+    position: relative;   /* establishes new stacking context */
 }
